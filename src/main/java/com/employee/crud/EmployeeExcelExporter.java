@@ -25,9 +25,26 @@ public class EmployeeExcelExporter {
     }
 
     private void writeHeaderRow(){
-        Row row = sheet.createRow(0); //First row is 0
-        Cell cell = row.createCell(0); //first column is 0
+
+        //First row is 0
+        Row row = sheet.createRow(0);
+
+        //First column is 0 and Write the First Column of 0
+        Cell cell = row.createCell(0);
         cell.setCellValue("Employee ID");
+
+        //next Row after Employee ID
+        cell = row.createCell(1);
+        cell.setCellValue("Employee firstName");
+
+        cell = row.createCell(2);
+        cell.setCellValue("Employee lastName");
+
+        cell = row.createCell(3);
+        cell.setCellValue("Employee Email");
+
+
+
     }
     private void writeDataRow(){
 
